@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script src="plugins/gsap/gsap.min.js" defer></script>
+    <script src="plugins/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="plugins/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <title>Ягодки - Главная страница</title>
+</head>
+<body>
+    
+
+
+    <!----- Header Section ----->
+    <header class="">
+        <!-- Logo -->
+        <img src="res/icons/Logo.png" class="logo">
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#" class="header__nav">Женщинам</a>
+            <a href="#" class="header__nav">Мужчинам</a>
+            <a href="#" class="header__nav">Детям</a>
+            <a href="#" class="header__nav">Акции</a>
+            <a href="#" class="header__nav">Контакты</a>
+        </nav>
+        <!-- Header Icons -->
+        <div class="header__controls">
+            <a href="#" class="controls__icon" id="search"></a>
+            <a href="#" class="controls__icon" id="cart"></a>
+            <a href="#" class="controls__icon" id="account"></a>
+            <input type="checkbox" class="controls__icon" id="globe">
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="content">
+            <main>
+                <!----- Main Screen ----->
+                <section class="section__main_screen">
+                    <div class="background">
+                        <div class="background back"></div>
+                        <div class="background mid"></div>
+                        <div class="background front"></div>
+                    </div>
+                    <div class="main_screen__left_side">
+                        <h1 class="header_centro">Ягодки</h1>
+                        <h2 class="header_bree">Онлайн-магазин одежды от российского производителя</h2>
+                    </div>
+                </section>
+                
+                <!----- New Collection Section ----->
+                <section class="section__new_collection centered">
+                    <div class="article_container centered">
+                        <h3 class="header_proxima">Новая коллекция</h3>
+                        <h4 class="header_museo">Стильная, футуристичная,  необычная новая коллекция кашемировых костюмов. Все как вы и мы любим.</h4>
+                        <input class="input_button" type="button" value="Перейти в каталог">
+                    </div>
+                </section>
+
+                <!----- Season Novelty Section ----->
+                <section class="section__novelty centered">
+                    <div class="background">
+                        <img src="res/png/blobs/Vector.png" alt="" id="blob_1">
+                        <img src="res/png/blobs/Vector-1.png" alt="" id="blob_2">
+                        <img src="res/png/blobs/Vector-2.png" alt="" id="blob_3">
+                        <img src="res/png/blobs/Vector-3.png" alt="" id="blob_4">
+                    </div>
+                    <div class="article_container centered">
+                        <h3 class="header_avenir">
+                            Новинки сезона
+                        </h3>
+                        <!-- Categories Container -->
+                        <div class="cards_container">
+                            <!-- Blue Category -->
+                            <div class="card">
+                                <img src="res/img/blue.png" class="card_ill">
+                                <p class="card__desc" id="blue">блю</p>
+                            </div>
+
+                            <!-- Red Category -->
+                            <div class="card">
+                                <img src="res/img/red.png" class="card_ill">
+                                <p class="card__desc" id="red">ред</p>
+                            </div>
+
+                            <!-- Green Category -->
+                            <div class="card">
+                                <img src="res/img/green.png" class="card_ill">
+                                <p class="card__desc" id="green">грин</p>
+                            </div>
+
+                            <!-- Pink Category -->
+                            <div class="card">
+                                <img src="res/img/pink.png" class="card_ill">
+                                <p class="card__desc" id="pink">пинк</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!----- Footer Section ----->
+                <footer>
+                    <div class="footer__upper">
+                        <div class="footer__left">
+                            <img class="logo" src="res/icons/Logo.png" alt="">
+                            <h4 class="footer">Ягодки</h4>
+                            <p class="footer__p">Магазин одежды от российского производителя</p>
+                        </div>
+                        <div class="footer__right">
+                            <h4 class="footer">Политика конфиденциальности</h4>
+                            <div class="footer__grid">
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Сбор информации</h5>
+                                    <p class="footer__p">Мы, компания 'Ягодки', собираем определенные данные при использовании нашего сайта. Это может включать ваши контактные данные, информацию о заказах и предпочтениях, а также данные об использовании нашего веб-сайта.</p>
+                                </div>
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Использование информации</h5>
+                                    <p class="footer__p">Мы используем собранную информацию для обработки заказов, улучшения работы сайта, предоставления персонализированных услуг и связи с вами в случае необходимости.</p>
+                                </div>
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Защита данных</h5>
+                                    <p class="footer__p">Мы принимаем меры для защиты ваших данных от утраты, недобросовестного использования и несанкционированного доступа.</p>
+                                </div>
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Предоставление данных третьим лицам</h5>
+                                    <p class="footer__p">Мы не передаем вашу личную информацию третьим лицам без вашего разрешения, за исключением случаев, предусмотренных законодательством РФ.</p>
+                                </div>
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Согласие с политикой конфиденциальности</h5>
+                                    <p class="footer__p">Используя наш сайт, вы даете согласие на сбор и использование вашей информации в соответствии с нашей политикой конфиденциальности.</p>
+                                </div>
+                                <div class="footer_article">
+                                    <h5 class="footer_low">Изменения в политике</h5>
+                                    <p class="footer__p">Мы оставляем за собой право вносить изменения в данную политику конфиденциальности. Любые изменения будут опубликованы на нашем сайте.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__lower">
+                        <hr>
+                        <div class="article_container centered">
+                            <a href="#" class="social_icon" id="inst"></a>
+                            <a href="#" class="social_icon" id="vk"></a>
+                            <a href="#" class="social_icon" id="face"></a>
+                        </div>
+                        <p class="footer__copyright">© Copyright 2024. All rights reserved</p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </div>
+
+
+</body>
+</html>

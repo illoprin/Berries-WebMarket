@@ -1,0 +1,461 @@
+:root {
+    --index: calc(1vw + 1vh);
+    --scrollTop: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(140deg, rgba(255,104,240,1) 0%, rgba(255,137,100,1) 100%);   
+    position: relative;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body * {
+    box-sizing: border-box;
+    display: block;
+    font-family: l_Bree;
+}
+
+h1 {
+    font-size: calc(var(--index)*5.5);
+}
+h2 {
+    font-size: calc(var(--index)*1.5);
+}
+h3 {
+    font-size: calc(var(--index)*1.25);
+}
+h4 {
+    font-size: calc(var(--index)*1);
+}
+
+/* ===== Header ===== */
+.logo {
+    width: 75px;
+}
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    height: 15vh;
+    width: 100%;
+    z-index: 2;
+
+    transition: all 300ms;
+}
+
+/* Scrolled Header */
+header.scrolled{
+    background-color: #000;
+}
+header.scrolled > nav .header__nav{
+    color: #fff;
+}
+header.scrolled > .header__controls .controls__icon {
+    background-color: #000;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.header__nav {
+    text-decoration: none;
+    color: #fff;
+    font-family: l_Fedra;
+
+    transition: transform 150ms;
+}
+.header__nav:hover {
+    transform: scale(1.1)
+}
+
+/* Icons */
+.header__controls {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+a.controls__icon,input[type="checkbox"].controls__icon {
+    display: block;
+    border: 0;
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    transition: transform 300ms;
+}
+.controls__icon#search {
+    background-image: url(res/icons/search.svg);
+}
+.controls__icon#account {
+    background-image: url(res/icons/account.svg);
+}
+.controls__icon#cart {
+    background-image: url(res/icons/cart.svg);
+}
+.controls__icon#globe {
+    background-image: url(res/icons/globe.svg);
+}
+.controls__icon:hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
+/* ===== End Header ===== */
+
+
+
+/* Section Base */
+section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+/* ===== Section Main Screen ===== */
+.section__main_screen {
+    display: flex;
+    align-items: center;
+}
+
+/* Background Image */
+.section__main_screen .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.section__main_screen .background {
+    width: 100%;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section__main_screen .background * {
+    transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+}
+.background.back {
+    z-index: -1;
+    background-image: url(res/png/bg_back.png);
+    transform: translateY(calc(var(--scrollTop)*.7));
+}
+.background.mid {
+    z-index: 0;
+    background-image: url(res/png/bg_mid.png);
+    transform: translateY(calc(var(--scrollTop)*0.3));
+}
+.background.front {
+    z-index: 1;
+    background-image: url(res/png/bg_front.png);
+    transform: translateY(calc(var(--scrollTop)*0.1));
+}
+
+/* Left Side Titler */
+.main_screen__left_side {
+    margin-left: 7%;
+}
+.main_screen__left_side * {
+    color: #fff;
+}
+.header_centro {
+    font-family: l_Centro;
+}
+.header_bree {
+    text-align: left;
+    width: 50%;
+}
+/* ===== End Section Main Screen ===== */
+
+/* ===== New Collection Section ===== */
+
+.section__new_collection {
+    background: linear-gradient(145deg, rgba(239,123,57,1) 0%, rgba(229,198,72,1) 100%);
+}
+
+.article_container {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(0,0,0,.25);
+
+    justify-content: space-around;
+    flex-flow: column nowrap;
+}
+.article_container h3,h4 {
+    color: #fff
+}
+.header_proxima {
+    font-family: l_Proxima;
+    text-transform: uppercase;
+}
+.header_museo {
+    width: 30%;
+    text-align: center;
+    line-height: 2em;
+}
+/* ===== End New Collection Section ===== */
+
+
+/* ===== Season Novelty Section ===== */
+
+/* Background */
+.section__novelty .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    
+    transition: all 300ms;
+}
+.section__novelty .background * {
+    position: absolute;
+    opacity: 20%;
+    filter: blur(20px);
+    transition: all 300ms;
+}
+/* Scrolled */
+.section__novelty.show_animation .background #blob_1 {
+    transform: translate(20vw, 10vh);
+}
+.section__novelty.show_animation .background #blob_2 {
+    transform: translate(80vw, 15vh);
+}
+.section__novelty.show_animation .background #blob_3 {
+    transform: translate(7vw, 71vh);
+}
+.section__novelty.show_animation .background #blob_4 {
+    transform: translate(85vw, 55vh);
+}
+
+/* UnScrolled */
+.section__novelty .background #blob_1 {
+    transform: translate(10vw, 5vh);
+}
+.section__novelty .background #blob_2 {
+    transform: translate(90vw, 10vh);
+}
+.section__novelty .background #blob_3 {
+    transform: translate(0vw, 90vh);
+}
+.section__novelty .background #blob_4 {
+    transform: translate(95vw, 70vh);
+}
+/* Background Animation */
+.section__novelty.show_animation .background * {
+    opacity: 100%;
+    filter: blur(0);
+}
+
+
+.section__novelty {
+    background: linear-gradient(143deg, rgba(241,155,255,1) 0%, rgba(255,118,208,1) 100%);
+}
+.header_avenir {
+    font-family: l_Avenir;
+    font-weight: 600;
+    font-size: calc(var(--index)*2);
+    text-align: left;
+}
+
+.section__novelty .article_container {
+    background: 0;
+    width: 70%;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.cards_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Collection Card Design */
+.card {
+    width: 15vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column nowrap;
+
+    transition: transform 300ms;
+}
+.card:hover {
+    transform: scale(1.25);
+    cursor: pointer;
+}
+.card_ill {
+    width: 100%;
+    border-radius: 25px;
+}
+.card__desc {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: l_Avenir;
+    margin-top: 15px;
+}
+.card__desc#blue{
+    font-weight: 900;
+    font-style: italic;
+}
+.card__desc#red{
+    font-weight: 400;
+}
+.card__desc#green{
+    font-weight: 500;
+    font-style: italic;
+}
+.card__desc#pink{
+    font-weight: 900;
+}
+
+/* ===== End Season Novelty Section ===== */
+
+
+/* ===== Footer ===== */
+
+footer {
+    width: 100vw;
+    min-height: 50vh;
+    background-color: #222222;
+    padding: 5%;
+}
+
+footer * {
+    font-family: l_Helvetica;
+    color: #fff;
+    
+}
+
+.footer__upper {
+    width: 100%;
+    height: 70%;
+}
+
+.footer__lower{
+    height: 30%;
+}
+
+.footer__left {
+    width: 30%;
+    float: left;
+}
+
+.footer__left .footer__p {
+    width: 70%;
+}
+
+.footer__right {
+    width: 70%;
+    float: left;
+}
+
+.footer__grid {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+    grid-template-rows: minmax(250px, 1fr) minmax(250px, 1fr);
+
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+}
+
+.footer__p {
+    line-height: 1.5em;
+}
+
+.footer__lower .article_container {
+    background: 0;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+.footer__copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: calc(var(--index)*1.1);
+}
+.social_icon {
+    transition: transform 300ms;
+    width: 7vw;
+    height: 7vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.social_icon:hover {
+    transform: scale(1.1);
+}
+.social_icon#inst {
+    background-image: url(res/icons/Instagram.png);
+}
+.social_icon#vk {
+    background-image: url(res/icons/vk.png);
+}
+.social_icon#face {
+    background-image: url(res/icons/facebook.png);
+}
+
+hr {
+    margin: 5% 0 5% 0;
+    appearance: none;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+
+/* ===== End Footer ===== */
+
+
+/* ====== Input ====== */
+input[type=button] {
+    padding: 15px 75px 15px 75px;
+    box-sizing: border-box;
+    font-size: calc(var(--index)*.9);
+    font-family: l_Kava;
+
+    border: solid 2px #fff;
+    border-radius: 40px;
+    background: 0;
+    color: #fff;
+
+    transition: color 100ms;
+    transition: background-color 300ms;
+}
+
+input[type=button]:hover {
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+

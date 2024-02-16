@@ -1,0 +1,100 @@
+/* Centro Sans Pro Font Import */
+@font-face {
+    font-family: l_Centro;
+    src: url(res/fonts/CenteoSansPro/PFCentroSansPro-Black.ttf);
+    font-weight: 900;
+}
+
+/* Bree Font Import */
+@font-face {
+    font-family: l_Bree;
+    src: url(res/fonts/Bree/BreeCYR-Semibold.ttf);
+    font-weight: 600;
+}
+
+/* Fedra Sans Font Import */
+@font-face {
+    font-family: l_Fedra;
+    src: url(res/fonts/FedraSans/FedraSansPro-Medium.ttf);
+    font-weight: 500;
+}
+
+/* Proxima Nova Sans Font Import */
+@font-face {
+    font-family: l_Proxima;
+    src: url(res/fonts/ProximaNova/ProximaNova-Semibold.ttf);
+    font-weight: 600;
+}
+
+/* Museo Slab Sans Font Import */
+/* HAS NO CYRILLIC */
+@font-face {
+    font-family: l_Museo;
+    src: url(res/fonts/MuseoSlab/MuseoSlab-900.ttf);
+    font-weight: 900;
+}
+
+/* FF Kava Font Import */
+@font-face {
+    font-family: l_Kava;
+    src: url(res/fonts/FFKava/DINOffcPro-CondBold.ttf);
+    font-weight: 700;
+}
+
+/* ==== Avenir Font Headsets */
+
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-demi.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-bolditalic.ttf);
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-mediumitalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-heavy.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: l_Avenir;
+    src: url(res/fonts/Avenir/avenirnextcyr-medium.ttf);
+    font-weight: 500;
+}
+
+
+/* Helvetica Headset Import */
+
+@font-face {
+    font-family: l_Helvetica;
+    src: url(res/fonts/Helvetica/helvetica_bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: l_Helvetica;
+    src: url(res/fonts/Helvetica/helvetica_light.otf);
+    font-weight: 300;
+}
+
+
